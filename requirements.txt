@@ -1,0 +1,31 @@
+asgiref==3.4.1; python_version >= "3.6" \
+    --hash=sha256:ffc141aa908e6f175673e7b1b3b7af4fdb0ecb738fc5c8b88f69f055c2415214 \
+    --hash=sha256:4ef1ab46b484e3c706329cedeff284a5d40824200638503f5768edb6de7d58e9
+beautifulsoup4==4.9.3; python_version >= "3.6" \
+    --hash=sha256:4c98143716ef1cb40bf7f39a8e3eec8f8b009509e74904ba3a7b315431577e35 \
+    --hash=sha256:fff47e031e34ec82bf17e00da8f592fe7de69aeea38be00523c04623c04fb666 \
+    --hash=sha256:84729e322ad1d5b4d25f805bfa05b902dd96450f43842c4e99067d5e1369eb25
+django-adminlte3==0.1.6; python_version >= "3.6" \
+    --hash=sha256:46d10068979145fa997051ddc78a29fc264ab2f17de321f38ed40c71dad3ca7e \
+    --hash=sha256:f11bfc828830f9e6b0692a5ac597151372baca31eaa23733ae23be4cdb677aa6
+django-bootstrap4==3.0.1; python_version >= "3.6" \
+    --hash=sha256:c5c97fb473bb56e3a91b4f4be52b74a3fc384ec3baae50dd0807fa922a55ec2b \
+    --hash=sha256:aa8a9cb5ab27cfae52a27d377a0401af268d0e4b91a5f8e660546464582cc010
+django==3.2.5; python_version >= "3.6" \
+    --hash=sha256:c58b5f19c5ae0afe6d75cbdd7df561e6eb929339985dbbda2565e1cabb19a62e \
+    --hash=sha256:3da05fea54fdec2315b54a563d5b59f3b4e2b1e69c3a5841dda35019c01855cd
+mysqlclient==2.0.3; python_version >= "3.5" \
+    --hash=sha256:3381ca1a4f37ff1155fcfde20836b46416d66531add8843f6aa6d968982731c3 \
+    --hash=sha256:0ac0dd759c4ca02c35a9fedc24bc982cf75171651e8187c2495ec957a87dfff7 \
+    --hash=sha256:71c4b330cf2313bbda0307fc858cc9055e64493ba9bf28454d25cf8b3ee8d7f5 \
+    --hash=sha256:fc575093cf81b6605bed84653e48b277318b880dc9becf42dd47fa11ffd3e2b6 \
+    --hash=sha256:f6ebea7c008f155baeefe16c56cd3ee6239f7a5a9ae42396c2f1860f08a7c432
+pytz==2021.1; python_version >= "3.6" \
+    --hash=sha256:eb10ce3e7736052ed3623d49975ce333bcd712c7bb19a58b9e2089d4057d0798 \
+    --hash=sha256:83a4a90894bf38e243cf052c8b58f381bfe9a7a483f6a9cab140bc7f702ac4da
+soupsieve==2.2.1; python_version >= "3.6" \
+    --hash=sha256:c2c1c2d44f158cdbddab7824a9af8c4f83c76b1e23e049479aa432feb6c4c23b \
+    --hash=sha256:052774848f448cf19c7e959adf5566904d525f33a3f8b6ba6f6f8f26ec7de0cc
+sqlparse==0.4.1; python_version >= "3.6" \
+    --hash=sha256:017cde379adbd6a1f15a61873f43e8274179378e95ef3fede90b5aa64d304ed0 \
+    --hash=sha256:0f91fd2e829c44362cbcfab3e9ae12e22badaa8a29ad5ff599f9ec109f0454e8
