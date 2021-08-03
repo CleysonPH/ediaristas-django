@@ -1,13 +1,27 @@
 {% extends 'base.html' %}
 {% load bootstrap4 %}
 
+{% block title %}
+  {% if request.resolver_match.url_name == 'cadastrar-usuario' %}
+    Cadastro
+  {% else %}
+    Edição
+  {% endif %}
+    de Usuário
+{% endblock title %}
+
 {% block content %}
   <div class="row">
     <div class="col">
       <div class="card card-primary">
         <div class="card-header">
           <div class="card-title">
-            Cadastro de Usuário
+            {% if request.resolver_match.url_name == 'cadastrar-usuario' %}
+              Cadastro
+            {% else %}
+              Edição
+            {% endif %}
+              de Usuário
           </div>
         </div>
         <div class="card-body">

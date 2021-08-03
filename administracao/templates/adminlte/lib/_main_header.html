@@ -1,4 +1,5 @@
 {% extends 'adminlte/lib/_main_header.html' %}
+{% load adminlte_helpers %}
 
 {% block nav_bar %}
   <ul class="navbar-nav">
@@ -9,4 +10,45 @@
         <a href="{% url 'listar-servicos' %}" class="nav-link">Home</a>
     </li>
   </ul>
+
+  {% block nav_custom_menu %}
+    <ul class="navbar-nav ml-auto">
+      <ul class="nav navbar-nav">
+        {% block headers_dropdowns %}
+          {% block user_info %}
+            {% if request.user.is_authenticated %}
+              <li class="nav-item dropdown">
+                <a class="nav-link" data-toggle="dropdown" href="#">
+                  <i class="far fa-user fa-2x"></i>
+                </a>
+                <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
+                  <a href="#" class="dropdown-item">
+                    <!-- Message Start -->
+                    <div class="media">
+                      <img src="{%avatar_url size=128 %}" alt="User Avatar" class="img-size-50 mr-3 img-circle">
+                      <div class="media-body">
+                        <h3 class="dropdown-item-title">
+                          {% firstof request.user.get_short_name request.user.get_username %}
+                          <span class="float-right text-sm text-danger"><i class="fas fa-online"></i></span>
+                        </h3>
+                        <p class="text-sm"><small>Membro desde</small></p>
+                        <p class="text-sm text-muted"><i class="far fa-clock mr-1"></i>  <small>{{ request.user.date_joined }}</small></p>
+                      </div>
+                    </div>
+                    <!-- Message End -->
+                  </a>
+                  <div class="dropdown-divider"></div>
+                  <div class="dropdown-footer">
+                    <a href="{% url 'alterar-senha' %}" class="btn btn-primary btn-sm">Mudar senha</a>
+                    <a  href="{% url 'logout' %}" class="btn btn-danger btn-sm">Sair</a>
+                  </div>
+                </div>
+              </li>
+            {% endif %}
+          {% endblock user_info %}
+        {% endblock headers_dropdowns %}
+      </ul>
+    </ul>
+  {% endblock nav_custom_menu %}
+
 {% endblock nav_bar %}
