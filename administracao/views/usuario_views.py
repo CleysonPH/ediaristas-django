@@ -1,15 +1,15 @@
 from django.http import HttpRequest, HttpResponse
 from django.contrib.auth import get_user_model
-from django.shortcuts import redirect, render
+from django.shortcuts import get_object_or_404, redirect, render
 
-from administracao.forms.usuario_forms import UsuarioForm
+from administracao.forms.usuario_forms import CadastroUsuarioForm, EditarUsuarioForm
 
 
 def cadastrar_usuario(request: HttpRequest) -> HttpResponse:
-    form = UsuarioForm()
+    form = CadastroUsuarioForm()
 
     if request.method == "POST":
-        form = UsuarioForm(request.POST)
+        form = CadastroUsuarioForm(request.POST)
 
         if form.is_valid():
             form.save()
@@ -31,3 +31,20 @@ def listar_usuarios(request: HttpRequest) -> HttpResponse:
     }
 
     return render(request, "usuarios/lista_usuarios.html", context)
+
+
+def editar_usuario(request: HttpRequest, pk: int) -> HttpResponse:
+    usuario = get_object_or_404(get_user_model(), pk=pk)
+
+    form = EditarUsuarioForm(request.POST or None, instance=usuario)
+
+    if form.is_valid():
+        form.save()
+
+        return redirect("listar-usuarios")
+
+    context = {
+        "form": form,
+    }
+
+    return render(request, "usuarios/form_usuario.html", context)

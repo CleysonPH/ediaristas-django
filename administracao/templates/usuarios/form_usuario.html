@@ -14,32 +14,7 @@
           <form method="POST">
             {% csrf_token %}
 
-            <div class="row">
-              <div class="col">
-                {% bootstrap_field form.username %}
-              </div>
-            </div>
-
-            <div class="row">
-              <div class="col-sm-12 col-md-6">
-                {% bootstrap_field form.password1 %}
-              </div>
-              <div class="col-sm-12 col-md-6">
-                {% bootstrap_field form.password2 %}
-              </div>
-            </div>
-
-            <div class="row">
-              <div class="col">
-                {% bootstrap_field form.first_name %}
-              </div>
-            </div>
-
-            <div class="row">
-              <div class="col">
-                {% bootstrap_field form.email %}
-              </div>
-            </div>
+            {% bootstrap_form form %}
 
             <button type="submit" class="btn btn-primary">Salvar</button>
           </form>
