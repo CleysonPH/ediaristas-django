@@ -1,8 +1,8 @@
 from django.shortcuts import get_object_or_404, redirect, render
 from django.http import HttpRequest, HttpResponse
 
-from .forms import ServicoForm
-from .models import Servico
+from administracao.forms.servico_forms import ServicoForm
+from administracao.models import Servico
 
 
 def cadastrar_servico(request: HttpRequest) -> HttpResponse:

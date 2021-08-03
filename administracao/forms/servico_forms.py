@@ -2,7 +2,7 @@ from decimal import Decimal
 
 from django import forms
 
-from .models import Servico
+from administracao.models import Servico
 
 
 class ServicoForm(forms.ModelForm):
